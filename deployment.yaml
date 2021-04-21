@@ -17,6 +17,32 @@ spec:
       containers:
         - name: udagramfeed
           image: meddy672/udagramfeed
+          env:
+            - name: POSTGRES_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: secret-kube
+                  key: POSTGRES_USERNAME
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secret-kube
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: secret-kube
+                  key: POSTGRES_HOST
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: secret-kube
+                  key: POSTGRES_DB
+            - name: URL
+              valueFrom:
+                secretKeyRef:
+                  name: secret-kube
+                  key: URL
           ports:
             - containerPort: 80
           livenessProbe:
