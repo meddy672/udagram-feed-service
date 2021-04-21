@@ -15,14 +15,13 @@ spec:
         app: udagram-feed
     spec:
       containers:
-      - name: udagramfeed
-        image: meddy672/udagramfeed
-        ports:
-        - containerPort: 80
-      livenessProbe:
-        httpGet:
-          path: /health
-          port: 8080
-        initialDelaySeconds: 3
-        periodSeconds: 3
-"deployment_with_liveness.yaml" 27L, 491C
+        - name: udagramfeed
+          image: meddy672/udagramfeed
+          ports:
+            - containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 3
