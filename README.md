@@ -1,5 +1,5 @@
 # Overview
-The udagram feed service is a microservice built with [ExpressJS](https://expressjs.com/) and [Typescript](https://www.typescriptlang.org/) provisioned for an [AWS EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html). The microservice is refactored from the monolith version of [Udagram](https://github.com/meddy672/udagram-monolith). The application consists of an simple API that uses a postgres database to create and fetch of items posted into the udagram feed.
+The udagram feed service is a microservice built with **ExpressJS** and **Typescript** provisioned for an **AWS EKS Cluster**. The microservice is refactored from the monolith version of [Udagram](https://github.com/meddy672/udagram-monolith). The application consists of an simple API that uses a postgres database to create and fetch of items posted into the udagram feed.
 
 ### Required Software
 1. Node.js 11.15.0
