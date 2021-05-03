@@ -12,7 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 .env
-secret-kube.yaml
+secret-kube-feed.yaml
 
 .idea/
 .ionic/

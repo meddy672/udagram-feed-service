@@ -17,31 +17,38 @@ spec:
       containers:
         - name: udagramfeed
           image: meddy672/udagramfeed
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
           env:
             - name: POSTGRES_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: secret-kube
+                  name: secret-kube-feed
                   key: POSTGRES_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: secret-kube
+                  name: secret-kube-feed
                   key: POSTGRES_PASSWORD
             - name: POSTGRES_HOST
               valueFrom:
                 secretKeyRef:
-                  name: secret-kube
+                  name: secret-kube-feed
                   key: POSTGRES_HOST
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:
-                  name: secret-kube
+                  name: secret-kube-feed
                   key: POSTGRES_DB
             - name: URL
               valueFrom:
                 secretKeyRef:
-                  name: secret-kube
+                  name: secret-kube-feed
                   key: URL
           ports:
             - containerPort: 80
